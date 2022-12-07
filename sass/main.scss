@@ -26,7 +26,7 @@ header {
         color: $dark-grayish-blue;
         &:hover {
           border-bottom: 0.4rem solid $orange;
-          padding-bottom: 2.5rem;
+          padding-bottom: 3.3rem;
           color: $black;
         }
       }
@@ -92,15 +92,9 @@ header {
             }
             .cart-checkout {
               font-size: 1.3rem;
-              .price-cart {
-              }
               .price-total {
                 padding: 0 1rem;
                 font-weight: 700;
-              }
-            }
-            .delete-cart {
-              &-item {
               }
             }
           }
@@ -123,13 +117,13 @@ header {
           }
         }
         &::before {
-            position: absolute;
-            content: "";
-            width: 100%;
-            height: 20%;
-            top: -1.5rem;
-            left: 0;
-          }
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 20%;
+          top: -1.5rem;
+          left: 0;
+        }
       }
     }
     .header-img {
@@ -145,3 +139,121 @@ header {
     }
   }
 }
+
+.slideShow {
+  &-row {
+    display: flex;
+    padding: 6rem 18rem;
+    justify-content: center;
+  }
+  &-col {
+    padding: 0 5rem;
+    width: 47rem;
+    .row-slide {
+      display: flex;
+      padding-top: 2rem;
+      width: 40rem;
+      justify-content: space-between;
+      .col-slide {
+        .img-slide {
+          width: 8rem;
+          height: 8rem;
+          border-radius: 1rem;
+          &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+    .product-content {
+      &-title {
+        text-transform: uppercase;
+        color: $orange;
+        padding: 3rem 0;
+        font-size: 1.5rem;
+      }
+      &-name {
+        font-size: 3rem;
+        font-weight: 700;
+        padding-bottom: 3rem;
+      }
+      &-desc {
+        padding-bottom: 2rem;
+        color: $dark-grayish-blue;
+        font-size: 1.2rem;
+      }
+      &-price {
+        .price {
+          font-size: 1.8rem;
+          font-weight: 700;
+          padding-right: 1rem;
+        }
+        .discount {
+          background-color: $pale-orange;
+          font-size: 1.6rem;
+          color: $orange;
+          border-radius: 0.6rem;
+          font-weight: 700;
+          padding: 0.2rem;
+        }
+
+        .del-price {
+          padding: 1rem 0rem 3rem;
+          font-size: 1.6rem;
+          font-weight: 600;
+          text-decoration: line-through;
+          color: $grayish-blue;
+        }
+      }
+      &-btn {
+        display: flex;
+        .incre-decre {
+          padding: 1rem 2rem;
+          background-color: $light-grayish-blue;
+          margin-right: 2rem;
+          border-radius: 1rem;
+          .increment {
+            padding-bottom: 0.3rem;
+            &:hover{
+              cursor: pointer;
+            }
+          }
+          .text-cart {
+            display: inline-block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 0.5rem 2rem;
+          }
+          .decrement:hover{
+            cursor: pointer;
+          }
+        }
+        .add-cart {
+          background-color: $orange;
+          padding: 0 4rem;
+          border: none;
+          border-radius: 1rem;
+          &-text {
+            display: inline-block;
+            color: $pale-orange;
+            font-size: 1.6rem;
+            font-weight: 700;
+            padding: 0 2rem;
+          }
+          &:hover {
+            opacity: 0.5;
+            box-shadow: 0 0.2rem 1rem $orange;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  &-product {
+    width: 40rem;
+    height: 45rem;
+    border-radius: 1rem;
+  }
+}
+

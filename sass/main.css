@@ -78,7 +78,7 @@ header nav li a {
 }
 header nav li a:hover {
   border-bottom: 0.4rem solid hsl(26deg, 100%, 55%);
-  padding-bottom: 2.5rem;
+  padding-bottom: 3.3rem;
   color: hsl(0deg, 0%, 0%);
 }
 header .icon-cart-user {
@@ -184,6 +184,122 @@ header .icon-cart-user .header-img-user:hover {
   border-radius: 50%;
   border: 0.1rem solid hsl(26deg, 100%, 55%);
   cursor: pointer;
+}
+
+.slideShow-row {
+  display: flex;
+  padding: 6rem 18rem;
+  justify-content: center;
+}
+.slideShow-col {
+  padding: 0 5rem;
+  width: 47rem;
+}
+.slideShow-col .row-slide {
+  display: flex;
+  padding-top: 2rem;
+  width: 40rem;
+  justify-content: space-between;
+}
+.slideShow-col .row-slide .col-slide .img-slide {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 1rem;
+}
+.slideShow-col .row-slide .col-slide .img-slide:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+.slideShow-col .product-content-title {
+  text-transform: uppercase;
+  color: hsl(26deg, 100%, 55%);
+  padding: 3rem 0;
+  font-size: 1.5rem;
+}
+.slideShow-col .product-content-name {
+  font-size: 3rem;
+  font-weight: 700;
+  padding-bottom: 3rem;
+}
+.slideShow-col .product-content-desc {
+  padding-bottom: 2rem;
+  color: hsl(219deg, 9%, 45%);
+  font-size: 1.2rem;
+}
+.slideShow-col .product-content-price .price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding-right: 1rem;
+}
+.slideShow-col .product-content-price .discount {
+  background-color: hsl(25deg, 100%, 94%);
+  font-size: 1.6rem;
+  color: hsl(26deg, 100%, 55%);
+  border-radius: 0.6rem;
+  font-weight: 700;
+  padding: 0.2rem;
+}
+.slideShow-col .product-content-price .del-price {
+  padding: 1rem 0rem 3rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: line-through;
+  color: hsl(220deg, 14%, 75%);
+}
+.slideShow-col .product-content-btn {
+  display: flex;
+}
+.slideShow-col .product-content-btn .incre-decre {
+  padding: 1rem 2rem;
+  background-color: hsl(223deg, 64%, 98%);
+  margin-right: 2rem;
+  border-radius: 1rem;
+}
+.slideShow-col .product-content-btn .incre-decre .increment {
+  padding-bottom: 0.3rem;
+}
+.slideShow-col .product-content-btn .incre-decre .increment:hover {
+  cursor: pointer;
+}
+.slideShow-col .product-content-btn .incre-decre .text-cart {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.5rem 2rem;
+}
+.slideShow-col .product-content-btn .incre-decre .decrement:hover {
+  cursor: pointer;
+}
+.slideShow-col .product-content-btn .add-cart {
+  background-color: hsl(26deg, 100%, 55%);
+  padding: 0 4rem;
+  border: none;
+  border-radius: 1rem;
+}
+.slideShow-col .product-content-btn .add-cart-text {
+  display: inline-block;
+  color: hsl(25deg, 100%, 94%);
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 0 2rem;
+}
+.slideShow-col .product-content-btn .add-cart:hover {
+  opacity: 0.5;
+  box-shadow: 0 0.2rem 1rem hsl(26deg, 100%, 55%);
+  cursor: pointer;
+}
+.slideShow-product {
+  width: 40rem;
+  height: 45rem;
+  border-radius: 1rem;
+}
+
+.opacity-on {
+  opacity: 0.5;
+}
+
+.border-slides {
+  border: 2px solid hsl(26deg, 100%, 55%);
 }
 
 /*# sourceMappingURL=main.css.map */
