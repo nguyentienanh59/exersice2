@@ -78,30 +78,31 @@
           />
         </div>
       </div>
+      <hr class="line-header" />
     </header>
     <section class="slideShow-row">
       <div class="slideShow-col">
         <img
           src="./images/image-product-1.jpg"
           alt="product-1"
-          class="slideShow-product"
+          class="slideShow-product sildeShow-manual"
         />
         <img
           src="./images/image-product-2.jpg"
           alt="product-2"
-          class="slideShow-product"
+          class="slideShow-product sildeShow-manual"
           style="display: none"
         />
         <img
           src="./images/image-product-3.jpg"
           alt="product-3"
-          class="slideShow-product"
+          class="slideShow-product sildeShow-manual"
           style="display: none"
         />
         <img
           src="./images/image-product-4.jpg"
           alt="product-4"
-          class="slideShow-product"
+          class="slideShow-product sildeShow-manual"
           style="display: none"
         />
         <div class="row-slide">
@@ -133,6 +134,12 @@
               onclick="currentDiv(4)"
             />
           </div>
+          <button class="btn-slideShow display-left" onclick="plusDivs(-1)">
+            <img src="./images/icon-previous.svg" alt="" class="prev" />
+          </button>
+          <button class="btn-slideShow display-right" onclick="plusDivs(1)">
+            <img src="./images/icon-next.svg" alt="" class="next" />
+          </button>
         </div>
       </div>
       <div class="slideShow-col">
@@ -183,8 +190,29 @@
         }
 
         x[slideIndex - 1].style.display = "block";
+      }
+      // slideshow mobile
+      var slideIndexs = 1;
+      showDivs(slideIndexs);
 
+      function plusDivs(n) {
+        showDivs((slideIndexs += n));
+      }
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("sildeShow-manual");
+        if (n > x.length) {
+          slideIndexs = 1;
+        }
+        if (n < 1) {
+          slideIndexs = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        x[slideIndexs - 1].style.display = "block";
       }
     </script>
   </body>
 </html>
+

@@ -1,15 +1,39 @@
 @import "./base/reset";
 @import "./base/variables";
+@import "./base/responsive";
 
 header {
   display: flex;
+  position: relative;
   align-items: center;
-  height: 10vh;
-  border-bottom: 1px solid $grayish-blue;
-  justify-content: space-around;
-  margin: 0 15rem;
+  height: 9rem;
+  max-width: 100%;
+  padding: 0 20rem;
+  @media screen and (max-width: 37.4rem) {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    .line-header {
+      display: none;
+    }
+    nav {
+      display: none;
+    }
+  }
+  .line-header {
+    position: absolute;
+    border: 0 none;
+    width: 79vw;
+    height: 0.1rem;
+    background-color: $dark-grayish-blue;
+    transform: translateY(4.7rem);
+  }
   .logo {
-    flex: 0.2;
+    @media screen and (max-width: 37.4rem) {
+      flex: 0;
+      padding-left: 1rem;
+    }
+    flex: 0.15;
   }
   nav {
     flex: 1;
@@ -60,12 +84,17 @@ header {
       }
       .cart-list {
         position: absolute;
+        z-index: 1;
         background-color: $white;
-        left: -60%;
-        transform: translateY(0.5rem);
+        transform: translate(-12.5rem, 0.5rem);
         border-radius: 0.4rem;
         box-shadow: 0 0.2rem 1rem $grayish-blue;
         display: none;
+        @media screen and (max-width: 37.4rem) {
+          left: 50%;
+          transform: translate(-28.5rem, 3.5rem);
+          padding: 0rem 4rem;
+        }
         .header-cart {
           font-size: $font-size;
           font-weight: 700;
@@ -78,6 +107,9 @@ header {
         .list-item {
           display: flex;
           align-items: center;
+          @media screen and (max-width: 37.4rem) {
+            justify-content: space-between;
+          }
           .img-cart {
             width: 4rem;
             height: 4rem;
@@ -128,7 +160,7 @@ header {
     }
     .header-img {
       &-user {
-        width: 2.5vw;
+        width: 3.5rem;
         float: right;
         &:hover {
           border-radius: 50%;
@@ -142,19 +174,26 @@ header {
 
 .slideShow {
   &-row {
-    display: flex;
+    display: grid;
     padding: 6rem 18rem;
     justify-content: center;
+    grid-template-columns: repeat(auto-fit, 47rem);
+    @media screen and (max-width: 37.4rem) {
+      padding: 0 0 0 0.5rem;
+    }
   }
   &-col {
     padding: 0 5rem;
-    width: 47rem;
+    position: relative;
     .row-slide {
       display: flex;
       padding-top: 2rem;
       width: 40rem;
       justify-content: space-between;
       .col-slide {
+        @media screen and (max-width: 37.4rem) {
+          display: none;
+        }
         .img-slide {
           width: 8rem;
           height: 8rem;
@@ -204,18 +243,35 @@ header {
           font-weight: 600;
           text-decoration: line-through;
           color: $grayish-blue;
+          @media screen and (max-width: 37.4rem) {
+            display: inline-block;
+            padding-left: 20rem;
+          }
         }
       }
       &-btn {
         display: flex;
+        @media screen and (max-width: 37.4rem) {
+          flex-direction: column;
+          flex-wrap: wrap;
+          align-content: space-around;
+          gap: 1rem;
+        }
         .incre-decre {
           padding: 1rem 2rem;
           background-color: $light-grayish-blue;
           margin-right: 2rem;
           border-radius: 1rem;
+          @media screen and (max-width: 37.4rem) {
+            display: flex;
+            justify-content: space-around;
+            align-items: baseline;
+            padding: 1.5rem 12rem;
+            margin: 0;
+          }
           .increment {
             padding-bottom: 0.3rem;
-            &:hover{
+            &:hover {
               cursor: pointer;
             }
           }
@@ -225,7 +281,7 @@ header {
             font-weight: 700;
             padding: 0.5rem 2rem;
           }
-          .decrement:hover{
+          .decrement:hover {
             cursor: pointer;
           }
         }
@@ -234,6 +290,13 @@ header {
           padding: 0 4rem;
           border: none;
           border-radius: 1rem;
+          @media screen and (max-width: 37.4rem) {
+            display: flex;
+            padding: 1.5rem 12rem;
+            display: flex;
+            padding: 1.5rem 10rem;
+            align-items: center;
+          }
           &-text {
             display: inline-block;
             color: $pale-orange;
@@ -249,11 +312,42 @@ header {
         }
       }
     }
+    .btn-slideShow {
+      display: none;
+      position: absolute;
+      background-color: $light-grayish-blue;
+      border-radius: 50%;
+      border: none;
+      height: 3.5rem;
+      width: 3.5rem;
+      @media screen and (max-width: 37.4rem) {
+        display: block;
+      }
+      .prev {
+        padding: 0.5rem 0.2rem;
+      }
+      .next {
+        padding: 0.5rem 0.2rem;
+      }
+    }
+    .display-left {
+      left: 50%;
+      transform: translate(-17rem, -20rem);
+    }
+    .display-right {
+      left: -50%;
+      transform: translate(61rem, -20rem);
+    }
   }
   &-product {
     width: 40rem;
     height: 45rem;
     border-radius: 1rem;
+    @media screen and (max-width: 37.4rem) {
+      width: 100%;
+      height: 55vh;
+    }
+  }
+  &-manual {
   }
 }
-
