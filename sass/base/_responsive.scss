@@ -42,6 +42,9 @@
     padding: 0 1rem;
     header {
       justify-content: space-between;
+      .sidebar {
+        display: block;
+      }
       .line-header {
         width: 100%;
       }
@@ -49,7 +52,7 @@
         flex: 0;
       }
       nav {
-        display: none;
+        @include sidenavbar();
       }
       .icon-cart-user {
         .shop-cart {
@@ -112,6 +115,9 @@
     padding: 0 1rem 1rem;
     header {
       @include flexbox(center, space-between);
+      .sidebar {
+        display: block;
+      }
       .line-header {
         display: none;
       }
@@ -119,7 +125,7 @@
         flex: 0;
       }
       nav {
-        display: none;
+        @include sidenavbar();
       }
       .icon-cart-user {
         .shop-cart {

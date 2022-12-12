@@ -21,11 +21,21 @@
   <body>
     <div class="container">
       <header>
+        <div class="sidebar">
+          <img src="./images/icon-menu.svg" alt="nav" class="sidebar-icon" />
+        </div>
         <div class="logo">
           <img src="./images/logo.svg" alt="Logo Fail" />
         </div>
         <nav>
-          <ul class="nav-menu">
+          <ul class="nav-menu" id="navbar">
+            <div class="cancel-btn">
+              <img
+                src="./images/icon-close.svg"
+                alt="Cancel"
+                class="cancel-icon"
+              />
+            </div>
             <li class="text-16"><a href="#">Collections</a></li>
             <li class="text-16"><a href="#">Men</a></li>
             <li class="text-16"><a href="#">Women</a></li>
@@ -67,7 +77,9 @@
                 </li>
               </ul>
               <div class="btn-checkout">
-                <button class="btn-checkout-cart text-16 font-700 cursor">Checkout</button>
+                <button class="btn-checkout-cart text-16 font-700 cursor">
+                  Checkout
+                </button>
               </div>
             </div>
           </div>
@@ -135,7 +147,6 @@
                 onclick="currentDiv(4)"
               />
             </div>
-            
           </div>
           <button class="btn-slideShow display-left" onclick="plusDivs(-1)">
             <img src="./images/icon-previous.svg" alt="" class="click" />
@@ -147,11 +158,13 @@
         <div class="slideShow-col">
           <div class="product-content">
             <h4 class="product-content-title text-15">Sneaker company</h4>
-            <p class="product-content-name text-30 font-700">Fall Limited Edition Sneakers</p>
+            <p class="product-content-name text-30 font-700">
+              Fall Limited Edition Sneakers
+            </p>
             <p class="product-content-desc text-12">
-              Get that Jordan energy on your feet this festive season. Rich grain
-              leather with bright details make this pair shine like festive
-              lights.
+              Get that Jordan energy on your feet this festive season. Rich
+              grain leather with bright details make this pair shine like
+              festive lights.
             </p>
             <div class="product-content-price">
               <span class="price text-18 font-700">$125.00</span>
@@ -161,9 +174,17 @@
           </div>
           <div class="product-content-btn">
             <div class="incre-decre">
-              <img src="./images/icon-minus.svg" alt="" class="increment cursor" />
+              <img
+                src="./images/icon-minus.svg"
+                alt=""
+                class="increment cursor"
+              />
               <p class="text-cart text-15 font-700">1</p>
-              <img src="./images/icon-plus.svg" alt="" class="decrement cursor" />
+              <img
+                src="./images/icon-plus.svg"
+                alt=""
+                class="decrement cursor"
+              />
             </div>
             <button class="add-cart cursor">
               <img src="./images/icon-cart.svg" alt="" class="add-cart-icon" />
@@ -215,6 +236,20 @@
         }
         x[slideIndexs - 1].style.display = "block";
       }
+
+      // sidebar
+      const nav = document.querySelector(".nav-menu");
+      const menuBtn = document.querySelector(".sidebar");
+      const cancelBtn = document.querySelector(".cancel-btn");
+      menuBtn.onclick = () => {
+        nav.classList.add("active");
+      };
+      cancelBtn.onclick = () => {
+        nav.classList.remove("active");
+      };
+
+      // close element when click outside
+
     </script>
   </body>
 </html>

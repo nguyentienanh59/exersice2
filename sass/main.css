@@ -146,6 +146,13 @@ table {
   position: relative;
   height: 9rem;
 }
+.container header .sidebar {
+  display: none;
+}
+.container header .sidebar-icon {
+  height: 2rem;
+  padding-right: 1rem;
+}
 .container header .line-header {
   position: absolute;
   border: 0 none;
@@ -166,6 +173,9 @@ table {
   justify-content: space-evenly;
   width: 100%;
   max-width: 50rem;
+}
+.container header nav .nav-menu .cancel-btn {
+  display: none;
 }
 .container header nav li a {
   text-decoration: none;
@@ -404,14 +414,49 @@ table {
   .container header {
     justify-content: space-between;
   }
+  .container header .sidebar {
+    display: block;
+  }
   .container header .line-header {
     width: 100%;
   }
   .container header .logo {
     flex: 0;
   }
-  .container header nav {
-    display: none;
+  .container header nav .nav-menu {
+    position: fixed;
+    background-color: hsl(0deg, 0%, 100%);
+    top: 0;
+    left: -100%;
+    display: block;
+    height: 100vh;
+    z-index: 1;
+    width: 20rem;
+    padding: 10rem 3rem;
+    transition: all 0.3s ease;
+  }
+  .container header nav .nav-menu .cancel-btn {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    padding: 1rem;
+  }
+  .container header nav .nav-menu.active {
+    left: 0%;
+  }
+  .container header nav li {
+    padding-bottom: 2rem;
+  }
+  .container header nav li a {
+    color: hsl(0deg, 0%, 0%);
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .container header nav li a:hover {
+    border-bottom: none;
+    padding: 0;
+    color: hsl(219deg, 9%, 45%);
   }
   .container header .icon-cart-user .shop-cart small {
     transform: translateY(0);
@@ -464,14 +509,49 @@ table {
     align-items: center;
     justify-content: space-between;
   }
+  .container header .sidebar {
+    display: block;
+  }
   .container header .line-header {
     display: none;
   }
   .container header .logo {
     flex: 0;
   }
-  .container header nav {
-    display: none;
+  .container header nav .nav-menu {
+    position: fixed;
+    background-color: hsl(0deg, 0%, 100%);
+    top: 0;
+    left: -100%;
+    display: block;
+    height: 100vh;
+    z-index: 1;
+    width: 20rem;
+    padding: 10rem 3rem;
+    transition: all 0.3s ease;
+  }
+  .container header nav .nav-menu .cancel-btn {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    padding: 1rem;
+  }
+  .container header nav .nav-menu.active {
+    left: 0%;
+  }
+  .container header nav li {
+    padding-bottom: 2rem;
+  }
+  .container header nav li a {
+    color: hsl(0deg, 0%, 0%);
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .container header nav li a:hover {
+    border-bottom: none;
+    padding: 0;
+    color: hsl(219deg, 9%, 45%);
   }
   .container header .icon-cart-user .shop-cart small {
     transform: translateY(0);

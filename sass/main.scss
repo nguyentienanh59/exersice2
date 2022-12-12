@@ -5,6 +5,7 @@
 @import "./helpers/mouse";
 @import "./components/button";
 @import "./base/bgc";
+@import "./components/sidebar";
 
 .container {
   padding: 0 10rem;
@@ -15,6 +16,13 @@
     @include flexbox(center);
     position: relative;
     height: 9rem;
+    .sidebar {
+      display: none;
+      &-icon{
+        height: 2rem;
+        padding-right: 1rem;
+      }
+    }
     .line-header {
       position: absolute;
       border: 0 none;
@@ -32,6 +40,9 @@
         @include flexbox($justify: space-evenly);
         width: 100%;
         max-width: 50rem;
+        .cancel-btn {
+          display: none;
+        }
       }
       li {
         a {
