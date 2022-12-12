@@ -95,7 +95,7 @@
           &-btn {
             padding: 0;
             justify-content: space-around;
-            .incre-decre{
+            .incre-decre {
               padding: 1rem 1rem;
             }
           }
@@ -111,8 +111,7 @@
   .container {
     padding: 0 1rem 1rem;
     header {
-      display: flex;
-      justify-content: space-between;
+      @include flexbox(center, space-between);
       .line-header {
         display: none;
       }
@@ -170,16 +169,12 @@
             justify-content: space-evenly;
             padding: 0;
             .incre-decre {
-              display: flex;
-              align-items: baseline;
-              justify-content: space-evenly;
+              @include flexbox(baseline, space-evenly);
               padding: 1.5rem 0;
               gap: 0;
             }
             .add-cart {
-              display: flex;
-              align-items: center;
-              justify-content: center;
+              @include flexbox(center, center);
               padding: 1.5rem 0;
               width: 26rem;
               &-text {
@@ -202,3 +197,4 @@
     }
   }
 }
+

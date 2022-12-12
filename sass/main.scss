@@ -1,14 +1,18 @@
 @import "./base/reset";
 @import "./base/variables";
+@import "./layout/flexbox";
+@import "./helpers/fonts";
+@import "./helpers/mouse";
+@import "./components/button";
+@import "./base/bgc";
 
-.container{
+.container {
   padding: 0 10rem;
-  @media screen and (max-width: 374px){
+  @media screen and (max-width: 374px) {
     padding: 0;
   }
   header {
-    display: flex;
-    align-items: center;
+    @include flexbox(center);
     position: relative;
     height: 9rem;
     .line-header {
@@ -16,7 +20,7 @@
       border: 0 none;
       width: 100%;
       height: 0.1rem;
-      background-color: $dark-grayish-blue;
+      @include bgc($dark-grayish-blue);
       transform: translateY(4.7rem);
     }
     .logo {
@@ -25,14 +29,11 @@
     nav {
       flex: 1;
       .nav-menu {
-        display: flex;
-        justify-content: space-evenly;
+        @include flexbox($justify: space-evenly);
         width: 100%;
         max-width: 50rem;
       }
       li {
-        font-size: $font-size;
-  
         a {
           text-decoration: none;
           color: $dark-grayish-blue;
@@ -45,15 +46,14 @@
       }
     }
     .icon-cart-user {
-      display: flex;
-      align-items: center;
+      @include flexbox(center);
       gap: 0.3rem;
       .shop-cart {
         position: relative;
         small {
           position: absolute;
           color: $white;
-          background-color: $orange;
+          @include bgc($orange);
           padding: 0.3rem 0.6rem;
           left: 50%;
           transform: translateY(35%);
@@ -61,14 +61,11 @@
         }
         &-img {
           padding: 1rem 3rem;
-          &:hover {
-            cursor: pointer;
-          }
         }
         .cart-list {
           position: absolute;
           z-index: 1;
-          background-color: $white;
+          @include bgc($white);
           border-radius: 0.4rem;
           box-shadow: 0 0.2rem 1rem $grayish-blue;
           display: none;
@@ -76,8 +73,6 @@
           width: 27.5rem;
           height: 19.5rem;
           .header-cart {
-            font-size: $font-size;
-            font-weight: 700;
             border-bottom: 0.1rem solid $grayish-blue;
             padding: 5%;
           }
@@ -85,8 +80,7 @@
             padding: 1.5rem;
           }
           .list-item {
-            display: flex;
-            align-items: center;
+            @include flexbox(center);
             .img-cart {
               width: 4rem;
               height: 4rem;
@@ -96,14 +90,11 @@
               padding: 0 0.9rem;
               color: $dark-grayish-blue;
               p {
-                font-size: 1.4rem;
                 padding-bottom: 0.6rem;
               }
               .cart-checkout {
-                font-size: 1.3rem;
                 .price-total {
                   padding: 0 1rem;
-                  font-weight: 700;
                 }
               }
             }
@@ -111,18 +102,9 @@
           .btn-checkout {
             padding: 2rem 1.5rem 0rem;
             &-cart {
-              background-color: $orange;
-              border: $pale-orange;
-              padding: 1rem 8.8rem;
-              border-radius: 0.5rem;
+              @extend %button;
               color: $pale-orange;
-              font-size: $font-size;
-              font-weight: 700;
-              &:hover {
-                opacity: 0.5;
-                box-shadow: 0 0.2rem 1rem $orange;
-                cursor: pointer;
-              }
+              padding: 1rem 8.8rem;
             }
           }
           &::before {
@@ -136,8 +118,6 @@
         }
         &:hover .cart-list {
           display: block;
-          cursor: pointer;
-          
         }
       }
       .header-img {
@@ -146,14 +126,12 @@
           float: right;
           &:hover {
             border-radius: 50%;
-            border: 0.1rem solid $orange;
-            cursor: pointer;
           }
         }
       }
     }
   }
-  
+
   .slideShow {
     &-row {
       display: grid;
@@ -164,8 +142,7 @@
     &-col {
       position: relative;
       .row-slide {
-        display: flex;
-        justify-content: space-between;
+        @include flexbox($justify: space-between);
         padding-top: 2rem;
         .col-slide {
           .img-slide {
@@ -173,7 +150,6 @@
             height: 8rem;
             border-radius: 1rem;
             &:hover {
-              cursor: pointer;
               opacity: 0.7;
             }
           }
@@ -185,86 +161,58 @@
           text-transform: uppercase;
           color: $orange;
           padding: 3rem 0;
-          font-size: 1.5rem;
         }
         &-name {
-          font-size: 3rem;
-          font-weight: 700;
           padding-bottom: 3rem;
         }
         &-desc {
           padding-bottom: 2rem;
           color: $dark-grayish-blue;
-          font-size: 1.2rem;
         }
         &-price {
           .price {
-            font-size: 1.8rem;
-            font-weight: 700;
             padding-right: 1rem;
           }
           .discount {
-            background-color: $pale-orange;
-            font-size: 1.6rem;
+            @include bgc($pale-orange);
             color: $orange;
             border-radius: 0.6rem;
-            font-weight: 700;
             padding: 0.2rem;
           }
-  
           .del-price {
             padding: 1rem 0rem 3rem;
-            font-size: 1.6rem;
-            font-weight: 600;
             text-decoration: line-through;
             color: $grayish-blue;
           }
         }
         &-btn {
-          display: flex;
+          @include flexbox();
           padding: 0 5rem;
           gap: 1rem;
           .incre-decre {
             padding: 1rem 3rem;
-            background-color: $light-grayish-blue;
+            @include bgc();
             border-radius: 1rem;
             .increment {
               padding-bottom: 0.3rem;
-              &:hover {
-                cursor: pointer;
-              }
             }
             .text-cart {
               display: inline-block;
-              font-size: 1.5rem;
-              font-weight: 700;
               padding: 0.5rem 2rem;
-            }
-            .decrement:hover {
-              cursor: pointer;
             }
           }
           .add-cart {
-            display:flex;
-            justify-content: center;
-            background-color: $orange;
+            @include flexbox($justify: center);
+            @extend %button;
             width: 20rem;
             border: none;
-            border-radius: 1rem;
             &-text {
               display: inline-block;
               color: $pale-orange;
-              font-size: 1.6rem;
-              font-weight: 700;
               padding: 1.2rem 0;
             }
-            &-icon{
+            &-icon {
               padding: 1rem;
-            }
-            &:hover {
-              opacity: 0.5;
-              box-shadow: 0 0.2rem 1rem $orange;
-              cursor: pointer;
             }
           }
         }
@@ -272,22 +220,22 @@
       .btn-slideShow {
         display: none;
         position: absolute;
-        background-color: $light-grayish-blue;
+        @include bgc();
         border-radius: 50%;
         border: none;
         height: 2.5rem;
         width: 2.5rem;
-        .click{
+        .click {
           padding: 0.5rem 0.2rem;
           width: 50%;
         }
       }
       .display-left {
-        left: .5rem;
+        left: 0.5rem;
         top: 50%;
       }
       .display-right {
-        right: .5rem;
+        right: 0.5rem;
         top: 50%;
       }
     }
@@ -298,5 +246,5 @@
   }
 }
 
-
 @import "./base/responsive";
+

@@ -1,0 +1,10 @@
+%button {
+  background-color: $orange;
+  border: $pale-orange;
+  border-radius: 1rem;
+  &:hover {
+    opacity: 0.5;
+    box-shadow: 0 0.2rem 1rem $orange;
+  }
+}
+
