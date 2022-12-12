@@ -1,23 +1,204 @@
-// @media screen and (min-width: 144rem) {
-// }
+@media screen and (min-width: 1024px) {
+}
 
-// @media screen and (max-width: 144rem) {
-// }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    header {
+      .logo {
+        flex: 0.5;
+      }
+      .nav {
+        .nav-menu {
+          justify-content: space-between;
+        }
+      }
+    }
+    .slideShow {
+      &-col {
+        .row-slide {
+          padding-top: 0;
+          position: absolute;
+          flex-direction: column;
+          top: 0;
+          transform: translateX(-90px);
+          .col-slide {
+            padding-bottom: 1rem;
+          }
+        }
+        .product-content {
+          padding: 0 5rem;
+          &-btn {
+            padding: 0;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
 
-// @media screen and (max-width: 37.4rem) {
-//   header {
-//     border-bottom: none ;
-//     background-color: $white;
-//     nav {
-//       ul {
-//         li {
-//           display: none;
-//         }
-//       }
-//       label {
-
-//         }
-//       }
-//     }
-//     }
-  
+@media (min-width: 413px) and (max-width: 767px) {
+  .container {
+    padding: 0 1rem;
+    header {
+      justify-content: space-between;
+      .line-header {
+        width: 100%;
+      }
+      .logo {
+        flex: 0;
+      }
+      nav {
+        display: none;
+      }
+      .icon-cart-user {
+        .shop-cart {
+          small {
+            transform: translateY(0);
+          }
+          &-img {
+            padding: 0rem 2rem;
+          }
+        }
+        &:hover .cart-list {
+          transform: translate(-14rem, 3rem);
+          left: -50%;
+        }
+        .list-item {
+          justify-content: space-between;
+        }
+      }
+    }
+    .slideShow {
+      &-row {
+        padding: 2rem 0rem;
+        grid-template-columns: repeat(auto-fit, 32rem);
+        justify-content: space-evenly;
+      }
+      &-col {
+        .row-slide {
+          .col-slide {
+            .img-slide {
+              width: 7rem;
+              height: 7rem;
+            }
+          }
+        }
+        .product-content {
+          padding: 0;
+          &-title {
+            padding: 2rem 0;
+          }
+          &-name {
+            padding-bottom: 2rem;
+          }
+          &-btn {
+            padding: 0;
+            justify-content: space-around;
+            .incre-decre{
+              padding: 1rem 1rem;
+            }
+          }
+        }
+      }
+      &-product {
+        height: 32rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 412px) {
+  .container {
+    padding: 0 1rem 1rem;
+    header {
+      display: flex;
+      justify-content: space-between;
+      .line-header {
+        display: none;
+      }
+      .logo {
+        flex: 0;
+      }
+      nav {
+        display: none;
+      }
+      .icon-cart-user {
+        .shop-cart {
+          small {
+            transform: translateY(0);
+          }
+          &-img {
+            padding: 0rem 2rem;
+          }
+        }
+        &:hover .cart-list {
+          transform: translate(-14rem, 3rem);
+          left: -50%;
+        }
+        .list-item {
+          justify-content: space-between;
+        }
+      }
+    }
+    .slideShow {
+      &-row {
+        padding: 0;
+        grid-template-columns: repeat(auto-fit, 26rem);
+      }
+      &-col {
+        .row-slide {
+          display: none;
+        }
+        .product-content {
+          padding: 0;
+          &-title {
+            padding: 2rem 0;
+            font-size: 1.3rem;
+          }
+          &-name {
+            font-size: 2rem;
+            padding-bottom: 2rem;
+          }
+          &-price {
+            .del-price {
+              display: inline-block;
+              padding-left: 10rem;
+            }
+          }
+          &-btn {
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 0;
+            .incre-decre {
+              display: flex;
+              align-items: baseline;
+              justify-content: space-evenly;
+              padding: 1.5rem 0;
+              gap: 0;
+            }
+            .add-cart {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 1.5rem 0;
+              width: 26rem;
+              &-text {
+                padding: 0 1rem;
+              }
+              &-icon {
+                padding: 0;
+                width: 10%;
+              }
+            }
+          }
+        }
+        .btn-slideShow {
+          display: block;
+        }
+      }
+      &-product {
+        height: 26rem;
+      }
+    }
+  }
+}

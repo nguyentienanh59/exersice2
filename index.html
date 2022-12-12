@@ -19,163 +19,166 @@
     <title>Sneaker</title>
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <img src="./images/logo.svg" alt="Logo Fail" />
-      </div>
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="#">Collections</a></li>
-          <li><a href="#">Men</a></li>
-          <li><a href="#">Women</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="icon-cart-user">
-        <div class="shop-cart">
-          <small>2</small>
-          <img
-            class="shop-cart-img"
-            src="./images/icon-cart.svg"
-            alt="shop-cart-fail"
-          />
-          <div class="cart-list">
-            <div class="header-cart">Cart</div>
-            <ul class="cart-list-items">
-              <li class="list-item">
-                <img
-                  class="img-cart"
-                  src="./images/image-product-1-thumbnail.jpg"
-                  alt="cart item"
-                />
-                <div class="cart-infor">
-                  <p>Fall limited Edition Sneaker</p>
-                  <div class="cart-checkout">
-                    <span class="price-cart">$125 x 3</span>
-                    <span class="price-total">$375.00</span>
-                  </div>
-                </div>
-                <div class="delete-cart">
+    <div class="container">
+      <header>
+        <div class="logo">
+          <img src="./images/logo.svg" alt="Logo Fail" />
+        </div>
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="icon-cart-user">
+          <div class="shop-cart">
+            <small>2</small>
+            <img
+              class="shop-cart-img"
+              src="./images/icon-cart.svg"
+              alt="shop-cart-fail"
+            />
+            <div class="cart-list">
+              <div class="header-cart">Cart</div>
+              <ul class="cart-list-items">
+                <li class="list-item">
                   <img
-                    class="delete-cart-item"
-                    src="./images/icon-delete.svg"
-                    alt="Delete"
+                    class="img-cart"
+                    src="./images/image-product-1-thumbnail.jpg"
+                    alt="cart item"
                   />
-                </div>
-              </li>
-            </ul>
-            <div class="btn-checkout">
-              <button class="btn-checkout-cart">Checkout</button>
+                  <div class="cart-infor">
+                    <p>Fall limited Edition Sneaker</p>
+                    <div class="cart-checkout">
+                      <span class="price-cart">$125 x 3</span>
+                      <span class="price-total">$375.00</span>
+                    </div>
+                  </div>
+                  <div class="delete-cart">
+                    <img
+                      class="delete-cart-item"
+                      src="./images/icon-delete.svg"
+                      alt="Delete"
+                    />
+                  </div>
+                </li>
+              </ul>
+              <div class="btn-checkout">
+                <button class="btn-checkout-cart">Checkout</button>
+              </div>
             </div>
           </div>
+          <div class="header-img">
+            <img
+              class="header-img-user"
+              src="./images/image-avatar.png"
+              alt="avatar"
+            />
+          </div>
         </div>
-        <div class="header-img">
+        <hr class="line-header" />
+      </header>
+      <section class="slideShow-row">
+        <div class="slideShow-col">
           <img
-            class="header-img-user"
-            src="./images/image-avatar.png"
-            alt="avatar"
+            src="./images/image-product-1.jpg"
+            alt="product-1"
+            class="slideShow-product sildeShow-manual"
           />
-        </div>
-      </div>
-      <hr class="line-header" />
-    </header>
-    <section class="slideShow-row">
-      <div class="slideShow-col">
-        <img
-          src="./images/image-product-1.jpg"
-          alt="product-1"
-          class="slideShow-product sildeShow-manual"
-        />
-        <img
-          src="./images/image-product-2.jpg"
-          alt="product-2"
-          class="slideShow-product sildeShow-manual"
-          style="display: none"
-        />
-        <img
-          src="./images/image-product-3.jpg"
-          alt="product-3"
-          class="slideShow-product sildeShow-manual"
-          style="display: none"
-        />
-        <img
-          src="./images/image-product-4.jpg"
-          alt="product-4"
-          class="slideShow-product sildeShow-manual"
-          style="display: none"
-        />
-        <div class="row-slide">
-          <div class="col-slide">
-            <img
-              class="img-slide"
-              src="./images/image-product-1-thumbnail.jpg"
-              onclick="currentDiv(1)"
-            />
-          </div>
-          <div class="col-slide">
-            <img
-              class="img-slide"
-              src="./images/image-product-2-thumbnail.jpg"
-              onclick="currentDiv(2)"
-            />
-          </div>
-          <div class="col-slide">
-            <img
-              class="img-slide"
-              src="./images/image-product-3-thumbnail.jpg"
-              onclick="currentDiv(3)"
-            />
-          </div>
-          <div class="col-slide">
-            <img
-              class="img-slide"
-              src="./images/image-product-4-thumbnail.jpg"
-              onclick="currentDiv(4)"
-            />
+          <img
+            src="./images/image-product-2.jpg"
+            alt="product-2"
+            class="slideShow-product sildeShow-manual"
+            style="display: none"
+          />
+          <img
+            src="./images/image-product-3.jpg"
+            alt="product-3"
+            class="slideShow-product sildeShow-manual"
+            style="display: none"
+          />
+          <img
+            src="./images/image-product-4.jpg"
+            alt="product-4"
+            class="slideShow-product sildeShow-manual"
+            style="display: none"
+          />
+          <div class="row-slide">
+            <div class="col-slide">
+              <img
+                class="img-slide"
+                src="./images/image-product-1-thumbnail.jpg"
+                onclick="currentDiv(1)"
+              />
+            </div>
+            <div class="col-slide">
+              <img
+                class="img-slide"
+                src="./images/image-product-2-thumbnail.jpg"
+                onclick="currentDiv(2)"
+              />
+            </div>
+            <div class="col-slide">
+              <img
+                class="img-slide"
+                src="./images/image-product-3-thumbnail.jpg"
+                onclick="currentDiv(3)"
+              />
+            </div>
+            <div class="col-slide">
+              <img
+                class="img-slide"
+                src="./images/image-product-4-thumbnail.jpg"
+                onclick="currentDiv(4)"
+              />
+            </div>
+            
           </div>
           <button class="btn-slideShow display-left" onclick="plusDivs(-1)">
-            <img src="./images/icon-previous.svg" alt="" class="prev" />
+            <img src="./images/icon-previous.svg" alt="" class="click" />
           </button>
           <button class="btn-slideShow display-right" onclick="plusDivs(1)">
-            <img src="./images/icon-next.svg" alt="" class="next" />
+            <img src="./images/icon-next.svg" alt="" class="click" />
           </button>
         </div>
-      </div>
-      <div class="slideShow-col">
-        <div class="product-content">
-          <h4 class="product-content-title">Sneaker company</h4>
-          <p class="product-content-name">Fall Limited Edition Sneakers</p>
-          <p class="product-content-desc">
-            Get that Jordan energy on your feet this festive season. Rich grain
-            leather with bright details make this pair shine like festive
-            lights.
-          </p>
-          <div class="product-content-price">
-            <span class="price">$125.00</span>
-            <span class="discount">50%</span>
-            <p class="del-price">$250</p>
+        <div class="slideShow-col">
+          <div class="product-content">
+            <h4 class="product-content-title">Sneaker company</h4>
+            <p class="product-content-name">Fall Limited Edition Sneakers</p>
+            <p class="product-content-desc">
+              Get that Jordan energy on your feet this festive season. Rich grain
+              leather with bright details make this pair shine like festive
+              lights.
+            </p>
+            <div class="product-content-price">
+              <span class="price">$125.00</span>
+              <span class="discount">50%</span>
+              <p class="del-price">$250</p>
+            </div>
+          </div>
+          <div class="product-content-btn">
+            <div class="incre-decre">
+              <img src="./images/icon-minus.svg" alt="" class="increment" />
+              <p class="text-cart">1</p>
+              <img src="./images/icon-plus.svg" alt="" class="decrement" />
+            </div>
+            <button class="add-cart">
+              <img src="./images/icon-cart.svg" alt="" class="add-cart-icon" />
+              <p class="add-cart-text">Add to cart</p>
+            </button>
           </div>
         </div>
-        <div class="product-content-btn">
-          <div class="incre-decre">
-            <img src="./images/icon-minus.svg" alt="" class="increment" />
-            <p class="text-cart">1</p>
-            <img src="./images/icon-plus.svg" alt="" class="decrement" />
-          </div>
-          <button class="add-cart">
-            <img src="./images/icon-cart.svg" alt="" class="add-cart-icon" />
-            <p class="add-cart-text">Add to cart</p>
-          </button>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <script>
       function currentDiv(n) {
-        showDivs((slideIndex = n));
+        showDivsDesk((slideIndex = n));
       }
-      function showDivs(n) {
+      function showDivsDesk(n) {
         var i;
         var x = document.getElementsByClassName("slideShow-product");
         var dots = document.getElementsByClassName("img-slide");
@@ -193,12 +196,12 @@
       }
       // slideshow mobile
       var slideIndexs = 1;
-      showDivs(slideIndexs);
+      showDivsMob(slideIndexs);
 
       function plusDivs(n) {
-        showDivs((slideIndexs += n));
+        showDivsMob((slideIndexs += n));
       }
-      function showDivs(n) {
+      function showDivsMob(n) {
         var i;
         var x = document.getElementsByClassName("sildeShow-manual");
         if (n > x.length) {
