@@ -18,7 +18,7 @@
     height: 9rem;
     .sidebar {
       display: none;
-      &-icon{
+      &-icon {
         height: 2rem;
         padding-right: 1rem;
       }
@@ -40,7 +40,7 @@
         @include flexbox($justify: space-evenly);
         width: 100%;
         max-width: 50rem;
-        .cancel-btn {
+        .btn-cancel {
           display: none;
         }
       }
@@ -137,6 +137,7 @@
           float: right;
           &:hover {
             border-radius: 50%;
+            border: 0.1rem solid $orange;
           }
         }
       }
@@ -236,7 +237,7 @@
         border: none;
         height: 2.5rem;
         width: 2.5rem;
-        .click {
+        .click-slideshow {
           padding: 0.5rem 0.2rem;
           width: 50%;
         }

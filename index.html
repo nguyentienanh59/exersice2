@@ -29,7 +29,7 @@
         </div>
         <nav>
           <ul class="nav-menu" id="navbar">
-            <div class="cancel-btn">
+            <div class="btn-cancel">
               <img
                 src="./images/icon-close.svg"
                 alt="Cancel"
@@ -93,154 +93,171 @@
         </div>
         <hr class="line-header" />
       </header>
-      <section class="slideShow-row">
-        <div class="slideShow-col">
-          <img
-            src="./images/image-product-1.jpg"
-            alt="product-1"
-            class="slideShow-product sildeShow-manual"
-          />
-          <img
-            src="./images/image-product-2.jpg"
-            alt="product-2"
-            class="slideShow-product sildeShow-manual"
-            style="display: none"
-          />
-          <img
-            src="./images/image-product-3.jpg"
-            alt="product-3"
-            class="slideShow-product sildeShow-manual"
-            style="display: none"
-          />
-          <img
-            src="./images/image-product-4.jpg"
-            alt="product-4"
-            class="slideShow-product sildeShow-manual"
-            style="display: none"
-          />
-          <div class="row-slide">
-            <div class="col-slide">
-              <img
-                class="img-slide cursor"
-                src="./images/image-product-1-thumbnail.jpg"
-                onclick="currentDiv(1)"
-              />
+      <main>
+        <section class="slideShow-row">
+          <div class="slideShow-col">
+            <img
+              src="./images/image-product-1.jpg"
+              alt="product-1"
+              class="slideShow-product sildeShow-manual"
+            />
+            <img
+              src="./images/image-product-2.jpg"
+              alt="product-2"
+              class="slideShow-product sildeShow-manual"
+              style="display: none"
+            />
+            <img
+              src="./images/image-product-3.jpg"
+              alt="product-3"
+              class="slideShow-product sildeShow-manual"
+              style="display: none"
+            />
+            <img
+              src="./images/image-product-4.jpg"
+              alt="product-4"
+              class="slideShow-product sildeShow-manual"
+              style="display: none"
+            />
+            <div class="row-slide">
+              <div class="col-slide">
+                <img
+                  class="img-slide cursor"
+                  src="./images/image-product-1-thumbnail.jpg"
+                  onclick="currentDiv(1)"
+                />
+              </div>
+              <div class="col-slide">
+                <img
+                  class="img-slide cursor"
+                  src="./images/image-product-2-thumbnail.jpg"
+                  onclick="currentDiv(2)"
+                />
+              </div>
+              <div class="col-slide">
+                <img
+                  class="img-slide cursor"
+                  src="./images/image-product-3-thumbnail.jpg"
+                  onclick="currentDiv(3)"
+                />
+              </div>
+              <div class="col-slide">
+                <img
+                  class="img-slide cursor"
+                  src="./images/image-product-4-thumbnail.jpg"
+                  onclick="currentDiv(4)"
+                />
+              </div>
             </div>
-            <div class="col-slide">
+            <button class="btn-slideShow display-left" onclick="plusDivs(-1)">
               <img
-                class="img-slide cursor"
-                src="./images/image-product-2-thumbnail.jpg"
-                onclick="currentDiv(2)"
+                src="./images/icon-previous.svg"
+                alt="Click-Pre"
+                class="click-slideshow"
               />
-            </div>
-            <div class="col-slide">
+            </button>
+            <button class="btn-slideShow display-right" onclick="plusDivs(1)">
               <img
-                class="img-slide cursor"
-                src="./images/image-product-3-thumbnail.jpg"
-                onclick="currentDiv(3)"
+                src="./images/icon-next.svg"
+                alt="Click-next"
+                class="click-slideshow"
               />
-            </div>
-            <div class="col-slide">
-              <img
-                class="img-slide cursor"
-                src="./images/image-product-4-thumbnail.jpg"
-                onclick="currentDiv(4)"
-              />
-            </div>
-          </div>
-          <button class="btn-slideShow display-left" onclick="plusDivs(-1)">
-            <img src="./images/icon-previous.svg" alt="" class="click" />
-          </button>
-          <button class="btn-slideShow display-right" onclick="plusDivs(1)">
-            <img src="./images/icon-next.svg" alt="" class="click" />
-          </button>
-        </div>
-        <div class="slideShow-col">
-          <div class="product-content">
-            <h4 class="product-content-title text-15">Sneaker company</h4>
-            <p class="product-content-name text-30 font-700">
-              Fall Limited Edition Sneakers
-            </p>
-            <p class="product-content-desc text-12">
-              Get that Jordan energy on your feet this festive season. Rich
-              grain leather with bright details make this pair shine like
-              festive lights.
-            </p>
-            <div class="product-content-price">
-              <span class="price text-18 font-700">$125.00</span>
-              <span class="discount text-16 font-700">50%</span>
-              <p class="del-price text-16 font-600">$250</p>
-            </div>
-          </div>
-          <div class="product-content-btn">
-            <div class="incre-decre">
-              <img
-                src="./images/icon-minus.svg"
-                alt=""
-                class="increment cursor"
-              />
-              <p class="text-cart text-15 font-700">1</p>
-              <img
-                src="./images/icon-plus.svg"
-                alt=""
-                class="decrement cursor"
-              />
-            </div>
-            <button class="add-cart cursor">
-              <img src="./images/icon-cart.svg" alt="" class="add-cart-icon" />
-              <p class="add-cart-text text-16 font-700">Add to cart</p>
             </button>
           </div>
-        </div>
-      </section>
+          <div class="slideShow-col">
+            <div class="product-content">
+              <h4 class="product-content-title text-15">Sneaker company</h4>
+              <p class="product-content-name text-30 font-700">
+                Fall Limited Edition Sneakers
+              </p>
+              <p class="product-content-desc text-12">
+                Get that Jordan energy on your feet this festive season. Rich
+                grain leather with bright details make this pair shine like
+                festive lights.
+              </p>
+              <div class="product-content-price">
+                <span class="price text-18 font-700">$125.00</span>
+                <span class="discount text-16 font-700">50%</span>
+                <p class="del-price text-16 font-600">$250</p>
+              </div>
+            </div>
+            <div class="product-content-btn">
+              <div class="incre-decre">
+                <img
+                  src="./images/icon-minus.svg"
+                  alt="Increment"
+                  class="increment cursor"
+                />
+                <p class="text-cart text-15 font-700">1</p>
+                <img
+                  src="./images/icon-plus.svg"
+                  alt="Decrement"
+                  class="decrement cursor"
+                />
+              </div>
+              <button class="add-cart cursor">
+                <img
+                  src="./images/icon-cart.svg"
+                  alt="Icon-cart"
+                  class="add-cart-icon"
+                />
+                <p class="add-cart-text text-16 font-700">Add to cart</p>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
 
     <script>
+      let slideIndexs = 1;
+      const nav = document.querySelector(".nav-menu");
+      const menuBtn = document.querySelector(".sidebar");
+      const cancelBtn = document.querySelector(".btn-cancel");
+
+      //slide show desktop and tablet
       function currentDiv(n) {
         showDivsDesk((slideIndex = n));
       }
       function showDivsDesk(n) {
-        var i;
-        var x = document.getElementsByClassName("slideShow-product");
-        var dots = document.getElementsByClassName("img-slide");
-        if (n > x.length) {
+        let index;
+        let mySlide = document.getElementsByClassName("slideShow-product");
+        let dots = document.getElementsByClassName("img-slide");
+        if (n > mySlide.length) {
           slideIndex = 1;
         }
         if (n < 1) {
-          slideIndex = x.length;
+          slideIndex = mySlide.length;
         }
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
+        for (index = 0; index < mySlide.length; index++) {
+          mySlide[index].style.display = "none";
         }
 
-        x[slideIndex - 1].style.display = "block";
+        mySlide[slideIndex - 1].style.display = "block";
       }
       // slideshow mobile
-      var slideIndexs = 1;
+
       showDivsMob(slideIndexs);
 
       function plusDivs(n) {
         showDivsMob((slideIndexs += n));
       }
       function showDivsMob(n) {
-        var i;
-        var x = document.getElementsByClassName("sildeShow-manual");
-        if (n > x.length) {
+        let index;
+        let mySlide = document.getElementsByClassName("sildeShow-manual");
+        if (n > mySlide.length) {
           slideIndexs = 1;
         }
         if (n < 1) {
           slideIndexs = x.length;
         }
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
+        for (index = 0; index < mySlide.length; index++) {
+          mySlide[index].style.display = "none";
         }
-        x[slideIndexs - 1].style.display = "block";
+        mySlide[slideIndexs - 1].style.display = "block";
       }
 
       // sidebar
-      const nav = document.querySelector(".nav-menu");
-      const menuBtn = document.querySelector(".sidebar");
-      const cancelBtn = document.querySelector(".cancel-btn");
       menuBtn.onclick = () => {
         nav.classList.add("active");
       };
@@ -249,7 +266,6 @@
       };
 
       // close element when click outside
-
     </script>
   </body>
 </html>
