@@ -177,6 +177,9 @@ table {
 .container header nav .nav-menu .btn-cancel {
   display: none;
 }
+.container header nav .nav-menu .btn-cancel .cancel-icon {
+  display: none;
+}
 .container header nav li a {
   text-decoration: none;
   color: hsl(219deg, 9%, 45%);
@@ -383,6 +386,31 @@ table {
   border-radius: 1rem;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container header .logo {
+    flex: 0.5;
+  }
+  .container header .nav .nav-menu {
+    justify-content: space-between;
+  }
+  .container .slideShow-col .row-slide {
+    padding-top: 0;
+    position: absolute;
+    flex-direction: column;
+    top: 0;
+    transform: translateX(-90px);
+  }
+  .container .slideShow-col .row-slide .col-slide {
+    padding-bottom: 1rem;
+  }
+  .container .slideShow-col .product-content {
+    padding: 0 5rem;
+  }
+  .container .slideShow-col .product-content-btn {
+    padding: 0;
+    justify-content: center;
+  }
+}
 @media (min-width: 413px) and (max-width: 767px) {
   .container {
     padding: 0 1rem;
@@ -417,6 +445,9 @@ table {
     top: 2rem;
     left: 2rem;
     padding: 1rem;
+  }
+  .container header nav .nav-menu .btn-cancel .cancel-icon {
+    display: block;
   }
   .container header nav .nav-menu.active {
     left: 0%;
@@ -512,6 +543,9 @@ table {
     top: 2rem;
     left: 2rem;
     padding: 1rem;
+  }
+  .container header nav .nav-menu .btn-cancel .cancel-icon {
+    display: block;
   }
   .container header nav .nav-menu.active {
     left: 0%;

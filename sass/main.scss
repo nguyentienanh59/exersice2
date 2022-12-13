@@ -42,6 +42,9 @@
         max-width: 50rem;
         .btn-cancel {
           display: none;
+          .cancel-icon{
+            display: none;
+          }
         }
       }
       li {
