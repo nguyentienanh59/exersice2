@@ -1,0 +1,41 @@
+@mixin sidenavbar() {
+  .nav-menu {
+    position: fixed;
+    @include bgc($white);
+    top: 0;
+    left: -100%;
+    display: block;
+    height: 100vh;
+    z-index: 1;
+    width: 20rem;
+    padding: 10rem 3rem;
+    transition: all 0.3s ease;
+    .btn-cancel {
+      display: block;
+      position: absolute;
+      top: 2rem;
+      left: 2rem;
+      padding: 1rem;
+      .cancel-icon{
+        display: block;
+      }
+    }
+  }
+  .nav-menu.active {
+    left: 0%;
+  }
+  li {
+    padding-bottom: 2rem;
+    a {
+      color: $black;
+      font-size: 2rem;
+      font-weight: 700;
+      &:hover {
+        border-bottom: none;
+        padding: 0;
+        color: $dark-grayish-blue;
+      }
+    }
+  }
+}
+
