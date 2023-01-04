@@ -404,6 +404,7 @@ table {
     flex-direction: column;
     top: 0;
     transform: translateX(-90px);
+    height: 39rem;
   }
   .container .slideShow-col .row-slide .col-slide {
     padding-bottom: 1rem;
