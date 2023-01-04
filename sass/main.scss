@@ -159,7 +159,9 @@
       .row-slide {
         @include flexbox($justify: space-between);
         padding-top: 2rem;
+        overflow-x: auto;
         .col-slide {
+          padding: 0.5rem;
           .img-slide {
             width: 8rem;
             height: 8rem;
@@ -169,6 +171,9 @@
             }
           }
         }
+      }
+      .row-slide::-webkit-scrollbar{
+        width: 0;
       }
       .product-content {
         padding: 5rem 5rem;
@@ -208,11 +213,9 @@
             padding: 1rem 3rem;
             @include bgc();
             border-radius: 1rem;
-            .increment {
-              padding-bottom: 0.3rem;
-            }
+            display: flex;
+            align-items: center;
             .text-cart {
-              display: inline-block;
               padding: 0.5rem 2rem;
             }
           }
